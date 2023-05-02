@@ -4,7 +4,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
 	'tsserver',
-	'sumneko_lua',
+	'lua_ls',
 	'rust_analyzer',
 })
 
@@ -18,7 +18,6 @@ lsp.configure('sumneko_lua', {
 		}
 	}
 })
-
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}

@@ -3,7 +3,7 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-vim.cmd [[colorscheme substrata]]
+-- vim.cmd [[colorscheme substrata]]
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
@@ -14,10 +14,11 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	-- ColorScheme
+	use 'kvrohit/substrata.nvim'
 	use({
-		'kvrohit/substrata.nvim',
+        'ellisonleao/gruvbox.nvim',
 		config = function()
-			vim.cmd('colorscheme substrata')
+			vim.cmd('colorscheme gruvbox')
 		end
 	})
 	use( 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'} )
